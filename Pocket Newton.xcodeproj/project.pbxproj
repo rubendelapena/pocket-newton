@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6DBA1C8F203E502D00F796F4 /* ExamTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA1C8E203E502D00F796F4 /* ExamTypeViewController.swift */; };
+		6DBA1C91203E529D00F796F4 /* TopicsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA1C90203E529D00F796F4 /* TopicsTableViewController.swift */; };
+		6DBA1C94203E53E900F796F4 /* ExamType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA1C93203E53E900F796F4 /* ExamType.swift */; };
+		6DBA1C97203E577500F796F4 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA1C96203E577500F796F4 /* Topic.swift */; };
+		6DBA1C99203E579900F796F4 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA1C98203E579800F796F4 /* Question.swift */; };
+		6DBA1C9B203E587600F796F4 /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA1C9A203E587600F796F4 /* Course.swift */; };
+		6DBA1C9F203E61BB00F796F4 /* TopicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA1C9E203E61BB00F796F4 /* TopicTableViewCell.swift */; };
 		6DDB5EA4203A13CB00DA5399 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDB5EA3203A13CB00DA5399 /* AppDelegate.swift */; };
-		6DDB5EA6203A13CB00DA5399 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDB5EA5203A13CB00DA5399 /* ViewController.swift */; };
 		6DDB5EA9203A13CB00DA5399 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DDB5EA7203A13CB00DA5399 /* Main.storyboard */; };
 		6DDB5EAB203A13CB00DA5399 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DDB5EAA203A13CB00DA5399 /* Assets.xcassets */; };
 		6DDB5EAE203A13CB00DA5399 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DDB5EAC203A13CB00DA5399 /* LaunchScreen.storyboard */; };
@@ -40,9 +46,15 @@
 /* Begin PBXFileReference section */
 		30A4A3C07EE672B1F76C591D /* Pods-Pocket Newton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pocket Newton.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pocket Newton/Pods-Pocket Newton.debug.xcconfig"; sourceTree = "<group>"; };
 		55407B4F5C0932FAF2D32E36 /* Pods_Pocket_Newton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pocket_Newton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DBA1C8E203E502D00F796F4 /* ExamTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamTypeViewController.swift; sourceTree = "<group>"; };
+		6DBA1C90203E529D00F796F4 /* TopicsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsTableViewController.swift; sourceTree = "<group>"; };
+		6DBA1C93203E53E900F796F4 /* ExamType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamType.swift; sourceTree = "<group>"; };
+		6DBA1C96203E577500F796F4 /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
+		6DBA1C98203E579800F796F4 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		6DBA1C9A203E587600F796F4 /* Course.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
+		6DBA1C9E203E61BB00F796F4 /* TopicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicTableViewCell.swift; sourceTree = "<group>"; };
 		6DDB5EA0203A13CA00DA5399 /* Pocket Newton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pocket Newton.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DDB5EA3203A13CB00DA5399 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6DDB5EA5203A13CB00DA5399 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6DDB5EA8203A13CB00DA5399 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6DDB5EAA203A13CB00DA5399 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6DDB5EAD203A13CB00DA5399 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -100,6 +112,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6DBA1C92203E53C600F796F4 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				6DBA1C93203E53E900F796F4 /* ExamType.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		6DBA1C95203E576B00F796F4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6DBA1C96203E577500F796F4 /* Topic.swift */,
+				6DBA1C98203E579800F796F4 /* Question.swift */,
+				6DBA1C9A203E587600F796F4 /* Course.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		6DDB5E97203A13CA00DA5399 = {
 			isa = PBXGroup;
 			children = (
@@ -125,13 +155,17 @@
 		6DDB5EA2203A13CA00DA5399 /* Pocket Newton */ = {
 			isa = PBXGroup;
 			children = (
+				6DBA1C95203E576B00F796F4 /* Models */,
+				6DBA1C92203E53C600F796F4 /* Enums */,
 				6DDB5EA3203A13CB00DA5399 /* AppDelegate.swift */,
-				6DDB5EA5203A13CB00DA5399 /* ViewController.swift */,
 				6DDB5EA7203A13CB00DA5399 /* Main.storyboard */,
 				6DDB5EAA203A13CB00DA5399 /* Assets.xcassets */,
 				6DDB5EAC203A13CB00DA5399 /* LaunchScreen.storyboard */,
 				6DDB5EAF203A13CB00DA5399 /* Info.plist */,
 				6DDB5ED1203A14B500DA5399 /* GoogleService-Info.plist */,
+				6DBA1C8E203E502D00F796F4 /* ExamTypeViewController.swift */,
+				6DBA1C90203E529D00F796F4 /* TopicsTableViewController.swift */,
+				6DBA1C9E203E61BB00F796F4 /* TopicTableViewCell.swift */,
 			);
 			path = "Pocket Newton";
 			sourceTree = "<group>";
@@ -354,8 +388,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DDB5EA6203A13CB00DA5399 /* ViewController.swift in Sources */,
+				6DBA1C91203E529D00F796F4 /* TopicsTableViewController.swift in Sources */,
+				6DBA1C9B203E587600F796F4 /* Course.swift in Sources */,
+				6DBA1C97203E577500F796F4 /* Topic.swift in Sources */,
 				6DDB5EA4203A13CB00DA5399 /* AppDelegate.swift in Sources */,
+				6DBA1C99203E579900F796F4 /* Question.swift in Sources */,
+				6DBA1C94203E53E900F796F4 /* ExamType.swift in Sources */,
+				6DBA1C9F203E61BB00F796F4 /* TopicTableViewCell.swift in Sources */,
+				6DBA1C8F203E502D00F796F4 /* ExamTypeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
