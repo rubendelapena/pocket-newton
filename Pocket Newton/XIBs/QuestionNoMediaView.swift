@@ -41,9 +41,9 @@ class QuestionNoMediaView: UIView {
     
     private func commonInit() {
         Bundle.main.loadNibNamed("QuestionNoMedia", owner: self, options: nil)
-        addSubview(contentView)
-        contentView.frame = self.bounds
-        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        self.addSubview(contentView)
+        self.contentView.frame = self.bounds
+        self.contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
     }
     
     private func set(question: Question) {

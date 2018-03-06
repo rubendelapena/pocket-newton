@@ -14,17 +14,16 @@ class QuizViewController: UIViewController {
     internal var questions: [Question] = [Question]()
     internal var selectedTopics: [Topic]!
     internal var examType: ExamType!
-    internal var ref: DatabaseReference!
-    private let minNumOfQuestionsPerTopic: Int = 3
+    private var ref: DatabaseReference!
     
+    private var currentQuestionNum: Int = -1
+    private let minNumOfQuestionsPerTopic: Int = 3
     private var question: Question {
         return self.questions[self.currentQuestionNum]
     }
     
-    internal var currentQuestionNum: Int = -1
-    
-    @IBOutlet weak var auxView: UIView!
-    internal var activeView: UIView? = nil
+    @IBOutlet weak private var auxView: UIView!
+    private var activeView: UIView? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,16 +55,6 @@ class QuizViewController: UIViewController {
         self.view.addSubview(readyQuiz)
         self.activeView = readyQuiz
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     // MARK: - Firebase
     
@@ -95,25 +84,6 @@ class QuizViewController: UIViewController {
             print(error.localizedDescription)
         }
     }
-}
-
-extension Array {
-    /// Returns an array containing this sequence shuffled
-    var shuffled: Array {
-        var elements = self
-        return elements.shuffle()
-    }
-    /// Shuffles this sequence in place
-    @discardableResult
-    mutating func shuffle() -> Array {
-        let count = self.count
-        indices.lazy.dropLast().forEach {
-            swapAt($0, Int(arc4random_uniform(UInt32(count - $0))) + $0)
-        }
-        return self
-    }
-    var chooseOne: Element { return self[Int(arc4random_uniform(UInt32(count)))] }
-    func choose(_ n: Int) -> Array { return Array(shuffled.prefix(n)) }
 }
 
 extension QuizViewController: QuizDelegate {

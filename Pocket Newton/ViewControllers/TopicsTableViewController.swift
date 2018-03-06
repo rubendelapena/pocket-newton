@@ -12,13 +12,13 @@ import Firebase
 class TopicsTableViewController: UITableViewController {
     
     // MARK: Outlets
-    @IBOutlet weak var beginButton: UIBarButtonItem!
+    @IBOutlet weak private var beginButton: UIBarButtonItem!
     
     // MARK: Class attributes
     internal var examType: ExamType!
     internal var courses: [Course] = [Course]()
     internal var selectedTopics: [Topic] = [Topic]()
-    internal var ref: DatabaseReference!
+    private var ref: DatabaseReference!
     
     // MARK: Class methods
     override func viewDidLoad() {

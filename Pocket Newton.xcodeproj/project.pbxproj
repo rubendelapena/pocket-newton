@@ -17,6 +17,7 @@
 		6D651978204E0CD200BF760C /* ReadyQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D651977204E0CD200BF760C /* ReadyQuizView.swift */; };
 		6D65197C204E152000BF760C /* QuizDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D65197B204E152000BF760C /* QuizDelegate.swift */; };
 		6D651980204E1C8C00BF760C /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D65197F204E1C8C00BF760C /* AnswerButton.swift */; };
+		6D651983204E257900BF760C /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D651982204E257900BF760C /* ArrayExtension.swift */; };
 		6DBA1C8F203E502D00F796F4 /* ExamTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA1C8E203E502D00F796F4 /* ExamTypeViewController.swift */; };
 		6DBA1C91203E529D00F796F4 /* TopicsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA1C90203E529D00F796F4 /* TopicsTableViewController.swift */; };
 		6DBA1C94203E53E900F796F4 /* ExamType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DBA1C93203E53E900F796F4 /* ExamType.swift */; };
@@ -66,6 +67,7 @@
 		6D651977204E0CD200BF760C /* ReadyQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyQuizView.swift; sourceTree = "<group>"; };
 		6D65197B204E152000BF760C /* QuizDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizDelegate.swift; sourceTree = "<group>"; };
 		6D65197F204E1C8C00BF760C /* AnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButton.swift; sourceTree = "<group>"; };
+		6D651982204E257900BF760C /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		6DBA1C8E203E502D00F796F4 /* ExamTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamTypeViewController.swift; sourceTree = "<group>"; };
 		6DBA1C90203E529D00F796F4 /* TopicsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsTableViewController.swift; sourceTree = "<group>"; };
 		6DBA1C93203E53E900F796F4 /* ExamType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamType.swift; sourceTree = "<group>"; };
@@ -163,6 +165,14 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		6D651981204E255E00BF760C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6D651982204E257900BF760C /* ArrayExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		6DBA1C92203E53C600F796F4 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +219,7 @@
 			isa = PBXGroup;
 			children = (
 				6DBA1C92203E53C600F796F4 /* Enums */,
+				6D651981204E255E00BF760C /* Extensions */,
 				6DBA1C95203E576B00F796F4 /* Models */,
 				6D651979204E14C300BF760C /* Protocols */,
 				6D651974204E0C2200BF760C /* ViewControllers */,
@@ -456,6 +467,7 @@
 				6D651972204C732800BF760C /* QuestionType.swift in Sources */,
 				6DBA1C94203E53E900F796F4 /* ExamType.swift in Sources */,
 				6D65197C204E152000BF760C /* QuizDelegate.swift in Sources */,
+				6D651983204E257900BF760C /* ArrayExtension.swift in Sources */,
 				6D651970204C6FFA00BF760C /* QuestionWithImageView.swift in Sources */,
 				6DBA1C9F203E61BB00F796F4 /* TopicTableViewCell.swift in Sources */,
 				6DBA1C8F203E502D00F796F4 /* ExamTypeViewController.swift in Sources */,
