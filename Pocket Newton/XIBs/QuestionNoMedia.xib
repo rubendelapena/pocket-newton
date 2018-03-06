@@ -14,11 +14,15 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuestionNoMediaView" customModule="Pocket_Newton" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="jB2-L3-OwB"/>
-                <outlet property="firstOption" destination="mnU-4n-VUA" id="Jnd-w9-ICq"/>
-                <outlet property="fourthOption" destination="zbl-e4-E0s" id="x1l-5a-5n7"/>
-                <outlet property="question" destination="0AC-gy-h7B" id="tCP-ub-uee"/>
-                <outlet property="secondOption" destination="pyg-6i-kJc" id="YSy-L4-CqM"/>
-                <outlet property="thirdOption" destination="oYq-ii-oSF" id="BbA-Ma-lbC"/>
+                <outlet property="firstOptionButton" destination="mnU-4n-VUA" id="gjV-BX-SU1"/>
+                <outlet property="fourthOptionButton" destination="zbl-e4-E0s" id="RvU-8A-QX7"/>
+                <outlet property="questionLabel" destination="0AC-gy-h7B" id="nDX-6z-cYr"/>
+                <outlet property="secondOptionButton" destination="pyg-6i-kJc" id="juK-Nf-ffd"/>
+                <outlet property="thirdOptionButton" destination="oYq-ii-oSF" id="PRD-Lh-1UQ"/>
+                <outletCollection property="answerButtons" destination="mnU-4n-VUA" collectionClass="NSMutableArray" id="1pb-Vy-hsb"/>
+                <outletCollection property="answerButtons" destination="pyg-6i-kJc" collectionClass="NSMutableArray" id="g60-KR-8mE"/>
+                <outletCollection property="answerButtons" destination="oYq-ii-oSF" collectionClass="NSMutableArray" id="RSl-O8-uIt"/>
+                <outletCollection property="answerButtons" destination="zbl-e4-E0s" collectionClass="NSMutableArray" id="doN-Xn-CyB"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -32,7 +36,7 @@
                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbl-e4-E0s">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbl-e4-E0s" customClass="AnswerButton" customModule="Pocket_Newton" customModuleProvider="target">
                     <rect key="frame" x="16" y="378" width="256" height="70"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -41,8 +45,11 @@
                     <state key="normal" title="Button">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="answered:" destination="-1" eventType="touchUpInside" id="MOF-9O-khj"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYq-ii-oSF">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYq-ii-oSF" customClass="AnswerButton" customModule="Pocket_Newton" customModuleProvider="target">
                     <rect key="frame" x="16" y="300" width="256" height="70"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -51,8 +58,11 @@
                     <state key="normal" title="Button">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="answered:" destination="-1" eventType="touchUpInside" id="8Cl-UP-DB1"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyg-6i-kJc">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pyg-6i-kJc" customClass="AnswerButton" customModule="Pocket_Newton" customModuleProvider="target">
                     <rect key="frame" x="16" y="222" width="256" height="70"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -61,8 +71,11 @@
                     <state key="normal" title="Button">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="answered:" destination="-1" eventType="touchUpInside" id="Htf-OD-HxW"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mnU-4n-VUA">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mnU-4n-VUA" customClass="AnswerButton" customModule="Pocket_Newton" customModuleProvider="target">
                     <rect key="frame" x="16" y="144" width="256" height="70"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
@@ -71,6 +84,9 @@
                     <state key="normal" title="Button">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="answered:" destination="-1" eventType="touchUpInside" id="4WK-fO-K8R"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>

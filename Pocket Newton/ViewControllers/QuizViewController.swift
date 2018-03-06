@@ -17,6 +17,10 @@ class QuizViewController: UIViewController {
     internal var ref: DatabaseReference!
     private let minNumOfQuestionsPerTopic: Int = 3
     
+    private var question: Question {
+        return self.questions[self.currentQuestionNum]
+    }
+    
     internal var currentQuestionNum: Int = -1
     
     @IBOutlet weak var auxView: UIView!
@@ -116,17 +120,9 @@ extension QuizViewController: QuizDelegate {
     func beginNextQuestion() {
         self.currentQuestionNum = self.currentQuestionNum + 1
         
-        let currentQuestion = self.questions[self.currentQuestionNum]
-        
-        if currentQuestion.type == .noMedia {
-            let questionView = QuestionNoMediaView(frame: self.auxView.frame)
+        if self.question.type == .noMedia {
+            let questionView = QuestionNoMediaView(frame: self.auxView.frame, question: self.question)
             questionView.parent = self
-            
-            questionView.question.text = currentQuestion.question
-            questionView.firstOption.setTitle(currentQuestion.answer, for: .normal)
-            questionView.secondOption.setTitle(currentQuestion.wrongAnswers[0], for: .normal)
-            questionView.thirdOption.setTitle(currentQuestion.wrongAnswers[1], for: .normal)
-            questionView.fourthOption.setTitle(currentQuestion.wrongAnswers[2], for: .normal)
             
             self.view.addSubview(questionView)
             self.activeView = questionView
