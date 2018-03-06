@@ -15,10 +15,10 @@ class TopicsTableViewController: UITableViewController {
     @IBOutlet weak var beginButton: UIBarButtonItem!
     
     // MARK: Class attributes
-    var examType: ExamType!
-    var courses: [Course] = [Course]()
-    var selectedTopics: [Topic] = [Topic]()
-    var ref: DatabaseReference!
+    internal var examType: ExamType!
+    internal var courses: [Course] = [Course]()
+    internal var selectedTopics: [Topic] = [Topic]()
+    internal var ref: DatabaseReference!
     
     // MARK: Class methods
     override func viewDidLoad() {
@@ -79,7 +79,9 @@ class TopicsTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "BeginQuizSegue" {
-            
+            let quizVC = segue.destination as! QuizViewController
+            quizVC.selectedTopics = self.selectedTopics
+            quizVC.examType = self.examType
         }
     }
     

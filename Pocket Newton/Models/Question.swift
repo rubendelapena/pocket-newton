@@ -7,15 +7,31 @@
 //
 
 import Foundation
+import Firebase
 
 class Question {
+    internal var id: String
     internal var question: String
     internal var answer: String
     internal var wrongAnswers: [String]
+    internal var type: QuestionType
     
-    public init(question: String, answer: String, wrongAnswers: [String]) {
-        self.question = question
-        self.answer = answer
-        self.wrongAnswers = wrongAnswers
+    public init(snapshot: DataSnapshot, topicID: String) {
+        let question = snapshot.value as? NSDictionary
+        
+        self.id = snapshot.key
+        self.question = question?["question"] as? String ?? "Unknown question"
+        self.answer = question?["answer"] as? String ?? "Unknown answer"
+        self.wrongAnswers = question?["wrong-answers"] as? [String] ?? [String]()
+        
+        let mediaType = question?["media-type"] as? String ?? "no-media"
+        switch mediaType {
+        case "no-media":
+            self.type = .noMedia
+        case "has-image":
+            self.type = .hasImage
+        default:
+            self.type = .noMedia
+        }
     }
 }

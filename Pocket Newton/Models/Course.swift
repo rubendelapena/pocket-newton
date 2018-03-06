@@ -23,7 +23,7 @@ class Course {
         let topicsSnapshot = snapshot.childSnapshot(forPath: "topics")
         var topics: [Topic] = [Topic]()
         for item in topicsSnapshot.children {
-            let topic = Topic(snapshot: item as! DataSnapshot)
+            let topic = Topic(snapshot: item as! DataSnapshot, courseID: self.id)
             topics.append(topic)
         }
         
