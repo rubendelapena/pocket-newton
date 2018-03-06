@@ -20,6 +20,13 @@ class ReadyQuizView: UIView {
         commonInit()
     }
     
+    init(frame: CGRect, questionNumber: Int, parent: QuizViewController) {
+        super.init(frame: frame)
+        commonInit()
+        self.questionNumber.text = "Question " + String(questionNumber)
+        self.parent = parent
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         commonInit()
@@ -33,7 +40,7 @@ class ReadyQuizView: UIView {
     }
     
     @IBAction func beginNextQuestion(_ sender: UIButton) {
-        self.parent.beginNextQuestion()
+        self.parent.showNextQuestion()
     }
     
 

@@ -15,16 +15,4 @@ class AnswerButton: UIButton {
     func set(text: String) {
         self.setTitle(text, for: .normal)
     }
-    
-    func resetColor() {
-        self.backgroundColor = .white
-    }
-    
-    func showAnswer() {
-        if self.isTheCorrectAnswer {
-            self.backgroundColor = .green
-        } else {
-            self.backgroundColor = .red
-        }
-    }
 }

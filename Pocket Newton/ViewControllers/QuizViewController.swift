@@ -48,14 +48,19 @@ class QuizViewController: UIViewController {
     }
     
     private func showReadyFor(question: Int) {
-        let readyQuiz = ReadyQuizView(frame: self.auxView.frame)
-        readyQuiz.questionNumber.text = "Question " + String(question)
-        readyQuiz.parent = self
-        
+        let readyQuiz = ReadyQuizView(frame: self.auxView.frame, questionNumber: question, parent: self)
         self.view.addSubview(readyQuiz)
         self.activeView = readyQuiz
     }
     
+    private func changeActiveView(from: UIView, to: UIView) {
+        UIView.transition(from: from, to: to, duration: 0.5, options: .transitionCrossDissolve, completion: nil)
+        from.removeFromSuperview()
+        self.activeView = to
+    }
+}
+
+extension QuizViewController {
     // MARK: - Firebase
     
     /// Method that fetches the questions from the database.
@@ -87,21 +92,20 @@ class QuizViewController: UIViewController {
 }
 
 extension QuizViewController: QuizDelegate {
-    func beginNextQuestion() {
+    func showNextQuestion() {
         self.currentQuestionNum = self.currentQuestionNum + 1
         
+        var questionView: UIView!
         if self.question.type == .noMedia {
-            let questionView = QuestionNoMediaView(frame: self.auxView.frame, question: self.question)
-            questionView.parent = self
-            
-            self.view.addSubview(questionView)
-            self.activeView = questionView
+            questionView = QuestionNoMediaView(frame: self.auxView.frame, question: self.question, parent: self)
         } else {
-            let questionView = QuestionWithImageView(frame: self.auxView.frame)
-            questionView.parent = self
-            
-            self.view.addSubview(questionView)
-            self.activeView = questionView
+            questionView = QuestionWithImageView(frame: self.auxView.frame)
         }
+        
+        self.changeActiveView(from: self.activeView!, to: questionView)
+    }
+    
+    func doneAnswering(withResult: Bool) {
+        self.showReadyFor(question: self.currentQuestionNum + 2)
     }
 }

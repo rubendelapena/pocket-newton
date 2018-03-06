@@ -9,5 +9,6 @@
 import Foundation
 
 protocol QuizDelegate {
-    func beginNextQuestion()
+    func showNextQuestion()
+    func doneAnswering(withResult: Bool)
 }

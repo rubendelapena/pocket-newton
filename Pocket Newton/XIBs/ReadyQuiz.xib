@@ -21,17 +21,19 @@
             <rect key="frame" x="0.0" y="0.0" width="288" height="468"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Question #" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUy-oA-4Of">
-                    <rect key="frame" x="82" y="144" width="124" height="32"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question #" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUy-oA-4Of">
+                    <rect key="frame" x="16" y="162" width="256" height="32"/>
                     <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPP-Vy-XP3">
-                    <rect key="frame" x="91" y="196" width="105" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPP-Vy-XP3">
+                    <rect key="frame" x="84" y="214" width="120" height="40"/>
                     <color key="backgroundColor" red="0.076685495674610138" green="0.47192865610122681" blue="0.96561425924301147" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="Cbj-R6-gMX"/>
+                        <constraint firstAttribute="width" constant="120" id="rGH-JZ-Ity"/>
+                    </constraints>
                     <state key="normal" title="Ready">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -41,6 +43,13 @@
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.098039217289999994" green="0.098039217289999994" blue="0.098039217289999994" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="vPP-Vy-XP3" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="7Fp-SN-Jee"/>
+                <constraint firstItem="vPP-Vy-XP3" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="DQ8-K3-LNs"/>
+                <constraint firstItem="GUy-oA-4Of" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="MXC-j7-hsj"/>
+                <constraint firstItem="vPP-Vy-XP3" firstAttribute="top" secondItem="GUy-oA-4Of" secondAttribute="bottom" constant="20" id="aST-uJ-ach"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="GUy-oA-4Of" secondAttribute="trailing" constant="16" id="wnr-l9-frh"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
         </view>
